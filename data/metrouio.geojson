@@ -1,0 +1,22 @@
+{
+"type": "FeatureCollection",
+"name": "metrouio",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "Estación El Labrador" }, "geometry": { "type": "Point", "coordinates": [ -78.4859949, -0.1554205, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación Jipijapa" }, "geometry": { "type": "Point", "coordinates": [ -78.4835535, -0.1641961, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación Iñaquito" }, "geometry": { "type": "Point", "coordinates": [ -78.4833278, -0.1761376, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación La Carolina" }, "geometry": { "type": "Point", "coordinates": [ -78.4858474, -0.1903001, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación La Pradera" }, "geometry": { "type": "Point", "coordinates": [ -78.4915459, -0.1937182, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación Universidad Central" }, "geometry": { "type": "Point", "coordinates": [ -78.5001864, -0.1982611, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación El Ejido" }, "geometry": { "type": "Point", "coordinates": [ -78.4980235, -0.2081508, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación La Alameda" }, "geometry": { "type": "Point", "coordinates": [ -78.5018967, -0.2152552, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación San Francisco" }, "geometry": { "type": "Point", "coordinates": [ -78.514486, -0.2206053, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación Magdalena" }, "geometry": { "type": "Point", "coordinates": [ -78.5242926, -0.2394409, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación El Recreo" }, "geometry": { "type": "Point", "coordinates": [ -78.5210025, -0.2520701, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación Cardenal De la Torre" }, "geometry": { "type": "Point", "coordinates": [ -78.533122, -0.257212, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación Solanda" }, "geometry": { "type": "Point", "coordinates": [ -78.5359752, -0.26552, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación Morán Valverde" }, "geometry": { "type": "Point", "coordinates": [ -78.5487922, -0.280929, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Estación Quitumbe" }, "geometry": { "type": "Point", "coordinates": [ -78.5560603, -0.2950091, 0.0 ] } }
+]
+}
