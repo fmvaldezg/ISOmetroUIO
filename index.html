@@ -44,10 +44,6 @@
           <input name='profile' type='radio' value='driving'>
           <div class='toggle toggle--active-null toggle--null'>Manejando</div>
         </label>
-        <label class='toggle-container'>
-            <input name='profile' type='radio' value='driving-traffic'>
-            <div class='toggle toggle--active-null toggle--null'>Tráfico</div>
-        </label>
       </div>
       <h4 class='txt-m txt-bold mb6'>Seleccionar tiempo máximo:</h4>
       <div class='mb12 mr12 toggle-group align-center'>
@@ -106,7 +102,7 @@
 const estaciones = [
   {
     url: 'https://raw.githubusercontent.com/fmvaldezg/ISOmetroUIO/improve/data/metrouio.geojso',
-    icon: 'https://raw.githubusercontent.com/fmvaldezg/ISOmetroUIO/improve/icons/logo-rojo.png',
+    icon: 'https://raw.githubusercontent.com/fmvaldezg/ISOmetroUIO/improve/icons/logo-rojo1.png',
     name: 'estacionesLYR',
     popup: '<h3>Estación</h3><p>{name}</p>'
   }
@@ -114,7 +110,7 @@ const estaciones = [
     // Call the getIso function
     map.on('load', async () => {
       map.loadImage(
-        'https://raw.githubusercontent.com/fmvaldezg/ISOmetroUIO/improve/icons/logo-rojo.png',
+        'https://raw.githubusercontent.com/fmvaldezg/ISOmetroUIO/improve/icons/logo-rojo1.png',
         (error, image) => {
           if (error) throw error;
           map.addImage('estaciones-logo', image);
@@ -141,19 +137,17 @@ const estaciones = [
           source: 'estaciones',
           layout: {
             'icon-image': 'estaciones-logo',
-            'icon-size': ['interpolate', ['linear'], ['zoom'], 0, 0.01, 17, 0.035],
+            'icon-size': 0.17,
             'text-field': ['get', 'name'],
-            'text-size': ['interpolate', ['linear'], ['zoom'], 0, 14, 17, 8],
+            'text-size': 9.5,
             'text-anchor': 'top',
             'icon-allow-overlap': true,
-            'text-offset': [0,2],
-            'text-optional': true,
+            'text-offset': [0,1],
           },
           paint: {
             'text-halo-color':'white',
             'text-color': 'rgb(211,58,68)',
             'text-halo-width': 2,
-            'text-halo-blur':0.5,
           },
         },
       );
