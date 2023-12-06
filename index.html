@@ -5,8 +5,10 @@
   <title>Get started with the Isochrone API</title>
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <!-- Import Mapbox GL JS  -->
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.0/mapbox-gl.css' rel='stylesheet' />
+  
   <!-- Import Assembly -->
   <link href='https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.min.css' rel='stylesheet'>
   <script src='https://api.mapbox.com/mapbox-assembly/v1.3.0/assembly.js'></script>
@@ -75,8 +77,9 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoiZm12YWxkZXpnODQiLCJhIjoiY2xqb29mYXBzMWg0YjNxbXVxbDVlZWVwNCJ9.nd2naVbA83Tz7N1uID8BlA';
     const map = new mapboxgl.Map({
       container: 'map', // Specify the container ID
-      style: 'mapbox://styles/mapbox/streets-v12', // Specify which map style to use
+      //style: 'mapbox://styles/mapbox/streets-v12', // Specify which map style to use
       center: [-78.5123274, -0.23], // Specify the starting position
+      lightPreset: 'dawn',
       zoom: 11.8, // Specify the starting zoom
     });
 
@@ -108,6 +111,11 @@ const estaciones = [
   }
 ];
     // Call the getIso function
+
+    map.on('style.load', () => {
+      map.setConfigProperty('basemap', 'lightPreset', 'day');
+      map.setConfigProperty('basemap', 'showPointOfInterestLabels', false);
+    });
     map.on('load', async () => {
       map.loadImage(
         'https://raw.githubusercontent.com/fmvaldezg/ISOmetroUIO/improve/icons/logo-rojo1.png',
@@ -163,7 +171,8 @@ const estaciones = [
             // The fill color for the layer is set to a light purple
             'fill-color': '#D33A44',
             'fill-opacity': 0.5,
-            'fill-outline-color': '#D33A44'
+            'fill-outline-color': '#D33A44',
+            'fill-emissive-strength':0.8,
           }
         },
       );
